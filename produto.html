@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Produtos - STORM</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/ladda/dist/ladda-themeless.min.css"/>
 </head>
 <body>
     <nav class="navbar navbar-expanded-lg navbar-dark bg-dark">
@@ -25,12 +26,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="submenu" href="#" aria-haspopup="true" aria-expanded="false">Cadastros</a>
                     <div class="dropdown-menu bg-dark" aria-labelledby="submenu">
-                        <a class="dropdown-item text-white" href="produto.html">
-                            Produtos
-                        </a>
-                        <a class="dropdown-item text-white" href="usuario.html">
-                            Usuários
-                        </a>
+                        <a class="dropdown-item text-white" href="produto.html">Produtos</a>
+                        <a class="dropdown-item text-white" href="usuario.html">Usuários</a>
                     </div>
                 </li>
             </ul>
@@ -38,16 +35,27 @@
     </nav>
     <div class="jumbotron">
         <h4 class="display-4">Cadastrar novo produto</h4>
-        <p class="lead">
-            Cadastre um novo produto
-            para ser exibido na prateleira.
-        </p>
+        <p class="lead">Cadastre um novo produto para ser exibido na prateleira.</p>
     </div>
     <div class="container-fluid">
         <form id="formProduto" autocomplete="off">
             <div class="row">
-                <div class="col-6">
-                    
+                <div class="col-12 col-md-6">
+                    <div class="form-group">
+                     <input class="form-control" type="text" name="nomeProduto" placeholder="Qual o nome?"/>   
+                    </div>
+                </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="precoProduto" placeholder="Qual o preço?"/>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group">
+                    <textarea rows="8" class="form-control" name="descProduto" placeholder="Qual a descrição?"></textarea>
+                </div>
+                <div class=" col-12 d-flex justify-content-end">
+                    <button id="btnSalvar" type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </div>
         </form>
@@ -55,4 +63,7 @@
 </body>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/ladda/dist/spin.min.js"></script>
+<script src="node_modules/ladda/dist/ladda.min.js"></script>
+<script src="Produto.js"></script>
 </html>
